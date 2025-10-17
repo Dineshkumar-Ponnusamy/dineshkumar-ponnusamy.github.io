@@ -71,38 +71,53 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 24px;
+            column-gap: clamp(12px, 2vw, 20px);
+            row-gap: clamp(6px, 1.5vw, 14px);
             flex-wrap: wrap;
-            padding: 60px 10%;
+            padding: 40px 8%;
+            align-content: center;
         }
 
         .skills-cloud span {
             font-size: clamp(16px, 2vw, 28px);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: rgba(255, 255, 255, 0.16);
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            color: rgba(255, 255, 255, 0.05);
             position: relative;
             display: inline-block;
             filter: blur(0.1px);
+            line-height: 1.1;
+            --tilt: 0deg;
+            opacity: 0;
+            transform: translateY(6px) rotate(var(--tilt));
+            animation: cloudFade 0.8s ease forwards;
+            animation-delay: calc(var(--order, 0) * 0.04s);
         }
 
         .skills-cloud span:nth-child(odd) {
-            transform: rotate(-6deg);
+            --tilt: -6deg;
         }
 
         .skills-cloud span:nth-child(even) {
-            transform: rotate(5deg);
+            --tilt: 5deg;
         }
 
         .skills-cloud span:nth-child(3n) {
             font-size: clamp(18px, 2.4vw, 32px);
-            color: rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 0.08);
         }
 
         .skills-cloud span:nth-child(4n) {
             font-size: clamp(14px, 1.8vw, 22px);
-            color: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.03);
+        }
+
+        @keyframes cloudFade {
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(var(--tilt, 0deg));
+            }
         }
 
         /* Desktop Icons */
@@ -493,6 +508,23 @@
             .skills-cloud {
                 display: none;
             }
+
+            .skills-bar {
+                display: none !important;
+                width: calc(100% - 32px);
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 120px;
+                box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+            }
+
+            .skills-bar.is-open {
+                display: flex !important;
+            }
+
+            .skills-toggle {
+                display: inline-flex;
+            }
         }
 
         @media (max-width: 600px) {
@@ -590,6 +622,27 @@
             padding: 0;
             flex: 0 0 auto;
         }
+        .skills-toggle {
+            position: fixed;
+            right: 16px;
+            bottom: 74px;
+            display: none;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 14px;
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 13px;
+            backdrop-filter: blur(6px);
+            z-index: 60;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+        .skills-toggle:hover { background: rgba(255,255,255,0.28); }
+        .skills-toggle:active { transform: translateY(1px); }
+        .skills-toggle:focus { outline: 2px solid #3498db; outline-offset: 2px; }
         .skill-chip {
             display: inline-flex;
             align-items: center;
@@ -613,31 +666,7 @@
 <body>
     <h1 class="sr-only">Dineshkumar Ponnusamy — R&amp;D Project Manager</h1>
     <div class="desktop" id="desktop">
-        <div class="skills-cloud" aria-hidden="true">
-            <span>Program Mgmt</span>
-            <span>MedTech</span>
-            <span>PACS</span>
-            <span>DICOM</span>
-            <span>IHE RAD-69</span>
-            <span>VNA</span>
-            <span>Systems Eng</span>
-            <span>ISO 13485</span>
-            <span>V&amp;V</span>
-            <span>Risk</span>
-            <span>Stakeholders</span>
-            <span>Automation</span>
-            <span>Python</span>
-            <span>C++ / C#</span>
-            <span>AWS</span>
-            <span>RAG</span>
-            <span>LangGraph</span>
-            <span>MCP</span>
-            <span>AI Delivery</span>
-            <span>Dashboards</span>
-            <span>Quality</span>
-            <span>Analytics</span>
-            <span>Leadership</span>
-        </div>
+        <div class="skills-cloud" aria-hidden="true"></div>
         <div class="desktop-icons">
             <button class="desktop-icon" type="button" data-app="about" aria-label="Open About window">
                 <i class="fas fa-user"></i>
@@ -1345,6 +1374,122 @@
     </div>
 
     <script>
+        // Dynamic Skills Cloud
+        const skillsCloudElement = document.querySelector('.skills-cloud');
+        if (skillsCloudElement) {
+            const skillKeywords = [
+                'Program Management',
+                'Project Leadership',
+                'Portfolio Strategy',
+                'Agile Delivery',
+                'Scrum Mastery',
+                'Scaled Agile (SAFe)',
+                'Change Management',
+                'Innovation',
+                'MedTech',
+                'Medical Devices',
+                'Healthcare IT',
+                'Systems Engineering',
+                'Risk Management',
+                'Stakeholder Alignment',
+                'Product Lifecycle',
+                'Regulatory Compliance',
+                'ISO 13485',
+                'IEC 62304',
+                'Verification & Validation',
+                'Quality Management',
+                'PACS',
+                'DICOM',
+                'IHE RAD-69',
+                'Vendor Neutral Archive',
+                'Automation',
+                'Python',
+                'C++ / C#',
+                'AWS',
+                'Azure',
+                'AI Delivery',
+                'Generative AI',
+                'Retrieval-Augmented Generation',
+                'LangChain',
+                'LangGraph',
+                'Model Context Protocol',
+                'Dashboards',
+                'Data Analytics',
+                'Leadership',
+                'Collaboration',
+                'Continuous Improvement',
+                'Jira',
+                'Jama Connect',
+                'Azure DevOps',
+                'IBM Rational DOORS',
+                'Rational DOORS DXL Programming',
+                'ClearQuest',
+                'Quality Center',
+                'Git / GitHub',
+                'Confluence',
+                'ServiceNow',
+                'Tableau',
+                'Power BI',
+                'SharePoint',
+                'Snowflake',
+                'Visual Basic for Applications (VBA)',
+                'SQL',
+                'Machine Learning',
+                'Natural Language Processing',
+                'Cloud Computing',
+                'Cybersecurity',
+                'Automation Frameworks',
+                'Team Mentorship',
+                'Cross-Functional Teams',
+                'Problem Solving',
+                'Communication Skills',
+                'Critical Thinking',
+                'Power Apps',
+                'Power Automate',
+                'HIPAA',
+                'GDPR',
+                'Data Privacy',
+                'ITIL',
+                'Six Sigma',
+                'Lean Methodologies',
+                'Design Thinking'
+            ];
+
+            const SKILL_CLOUD_SIZE = Math.min(28, skillKeywords.length);
+            const CLOUD_ROTATION_MS = 9000;
+            const shuffleKeywords = () => skillKeywords.slice().sort(() => Math.random() - 0.5);
+            let keywordPool = shuffleKeywords();
+
+            const getNextSelection = () => {
+                if (keywordPool.length < SKILL_CLOUD_SIZE) {
+                    keywordPool = shuffleKeywords();
+                }
+                return keywordPool.splice(0, SKILL_CLOUD_SIZE);
+            };
+
+            const renderSkillsCloud = () => {
+                const fragment = document.createDocumentFragment();
+                const selection = getNextSelection();
+
+                selection.forEach((keyword, index) => {
+                    const span = document.createElement('span');
+                    span.textContent = keyword;
+                    span.style.setProperty('--order', index);
+                    fragment.appendChild(span);
+                });
+
+                skillsCloudElement.replaceChildren(fragment);
+            };
+
+            renderSkillsCloud();
+            setInterval(renderSkillsCloud, CLOUD_ROTATION_MS);
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden) {
+                    renderSkillsCloud();
+                }
+            });
+        }
+
         // Window Management
         let activeWindow = null;
         let zIndexCounter = 10;
