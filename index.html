@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dineshkumar Ponnusamy — R&D Project Manager at Varian (a Siemens Healthineers company). 14+ years in medtech delivering regulated, systems-engineered solutions.">
+    <meta property="og:title" content="Dineshkumar Ponnusamy — R&D Project Manager">
+    <meta property="og:description" content="Medtech R&D program and project leader. Systems engineering, quality & compliance, and impactful healthcare solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dineshkumar-ponnusamy.github.io/">
+    <meta name="twitter:card" content="summary">
+    <title>Dineshkumar Ponnusamy - R&D Project Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            padding-bottom: 70px;
+        }
+
+        /* Desktop Background */
+        .desktop {
+            width: 100%;
+            min-height: calc(100vh - 50px);
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            padding-bottom: 220px;
+            padding-top: 40px;
+        }
+
+        .desktop::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 0;
+        }
+
+        .skills-cloud {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding: 60px 10%;
+        }
+
+        .skills-cloud span {
+            font-size: clamp(16px, 2vw, 28px);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.16);
+            position: relative;
+            display: inline-block;
+            filter: blur(0.1px);
+        }
+
+        .skills-cloud span:nth-child(odd) {
+            transform: rotate(-6deg);
+        }
+
+        .skills-cloud span:nth-child(even) {
+            transform: rotate(5deg);
+        }
+
+        .skills-cloud span:nth-child(3n) {
+            font-size: clamp(18px, 2.4vw, 32px);
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .skills-cloud span:nth-child(4n) {
+            font-size: clamp(14px, 1.8vw, 22px);
+            color: rgba(255, 255, 255, 0.12);
+        }
+
+        /* Desktop Icons */
+        .desktop-icons {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            gap: 24px;
+            padding: 24px;
+            position: relative;
+            z-index: 2;
+            justify-items: center;
+            align-content: start;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .desktop-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 100px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 8px;
+            padding: 10px;
+            border: none;
+            background: none;
+            color: inherit;
+            gap: 8px;
+        }
+
+        .desktop-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .desktop-icon:focus, .taskbar-app:focus, .start-menu-item:focus, .window-control:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+
+        .desktop-icon.selected {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .desktop-icon i {
+            font-size: 40px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .desktop-icon span {
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        /* Windows */
+        .window {
+            position: absolute;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            min-width: min(400px, 90vw);
+            min-height: min(300px, calc(100vh - 180px));
+            max-width: min(90vw, 900px);
+            max-height: calc(100vh - 150px);
+            display: none;
+            flex-direction: column;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .window.active {
+            display: flex;
+        }
+
+        .window-header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: move;
+            user-select: none;
+        }
+
+        .window-title {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .window-control {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+        }
+
+        .window-control.minimize {
+            background-color: #f1c40f;
+        }
+
+        .window-control.maximize {
+            background-color: #2ecc71;
+        }
+
+        .window-control.close {
+            background-color: #e74c3c;
+        }
+
+        .window-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .window-footer {
+            background-color: #ecf0f1;
+            padding: 8px 12px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+
+        /* Taskbar */
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(44, 62, 80, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            z-index: 100;
+        }
+
+        .taskbar-apps {
+            display: flex;
+            gap: 5px;
+            overflow-x: auto;
+            padding: 5px 0;
+        }
+
+        .taskbar-apps::-webkit-scrollbar {
+            display: none;
+        }
+
+        .taskbar-app {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: white;
+            border: none;
+            padding: 0;
+            background-image: none;
+        }
+
+        .taskbar-app:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .taskbar-app.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-bottom: 2px solid #3498db;
+        }
+
+        .system-tray {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Start Menu */
+        .start-menu {
+            position: absolute;
+            bottom: 50px;
+            left: 10px;
+            width: 300px;
+            max-height: calc(100vh - 120px);
+            background-color: rgba(44, 62, 80, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 8px 8px 0 0;
+            display: none;
+            flex-direction: column;
+            z-index: 101;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+        }
+
+        .start-menu.active {
+            display: flex;
+        }
+
+        .start-menu-header {
+            padding: 15px;
+            background-color: rgba(52, 73, 94, 0.9);
+            border-radius: 8px 8px 0 0;
+            color: white;
+            font-weight: 500;
+        }
+
+        .start-menu-items {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .start-menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: white;
+            border: none;
+            background: none;
+            width: 100%;
+            gap: 6px;
+        }
+
+        .start-menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .start-menu-item i {
+            font-size: 24px;
+        }
+
+        .start-menu-item span {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        /* Window Resizing */
+        .resize-handle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            cursor: nwse-resize;
+            z-index: 11;
+        }
+
+        .resize-handle::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            right: 3px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 10px 10px;
+            border-color: transparent transparent #7f8c8d transparent;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .desktop {
+                padding-bottom: 240px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .desktop-icons {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 20px;
+                max-width: 420px;
+            }
+
+            .skills-bar {
+                width: min(720px, calc(100% - 36px));
+            }
+
+            .skills-cloud {
+                padding: 50px 12%;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            body {
+                padding-bottom: 120px;
+            }
+
+            .desktop {
+                padding-bottom: 80px;
+            }
+
+            .desktop-icons {
+                max-width: 380px;
+            }
+
+            .skills-bar {
+                position: static;
+                transform: none;
+                width: auto;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                margin: 20px 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+                overflow-x: visible;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .desktop {
+                min-height: calc(100vh - 56px);
+            }
+
+            .desktop-icons {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+                gap: 12px;
+                max-width: 320px;
+            }
+            
+            .desktop-icon {
+                width: 90px;
+                height: 105px;
+                padding: 8px;
+            }
+            
+            .desktop-icon i {
+                font-size: 32px;
+            }
+
+            .taskbar {
+                height: 56px;
+            }
+
+            .taskbar-app {
+                width: 38px;
+                height: 38px;
+            }
+
+            .system-tray {
+                gap: 10px;
+                font-size: 12px;
+            }
+
+            .start-menu {
+                bottom: 56px;
+            }
+
+            .window {
+                max-height: calc(100vh - 130px);
+            }
+
+            .window-header {
+                padding: 10px 14px;
+            }
+
+            .window-content {
+                padding: 16px;
+            }
+
+            .skills-cloud {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding-bottom: 150px;
+            }
+
+            .desktop {
+                min-height: calc(100vh - 56px);
+                padding-bottom: 40px;
+            }
+
+            .desktop-icons {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                max-width: 260px;
+            }
+
+            .desktop-icon {
+                width: 100px;
+                height: 110px;
+            }
+
+            .desktop-icon i {
+                font-size: 34px;
+            }
+
+            .skills-bar {
+                gap: 10px;
+                margin: 16px;
+            }
+
+            .skill-chip {
+                flex: 1 1 calc(50% - 12px);
+                justify-content: center;
+            }
+
+            .start-menu {
+                width: calc(100% - 20px);
+                left: 10px;
+                bottom: 60px;
+                border-radius: 12px 12px 0 0;
+            }
+
+            .start-menu-items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .taskbar-apps {
+                gap: 4px;
+                padding-bottom: 6px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .desktop-icon {
+                width: 90px;
+                height: 105px;
+            }
+
+            .skills-bar {
+                margin: 12px;
+            }
+
+            .skill-chip {
+                flex: 1 1 100%;
+            }
+
+            .start-menu-items {
+                gap: 8px;
+            }
+        }
+
+        /* Skills Bar */
+        .skills-bar {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 70px; /* above taskbar */
+            width: min(960px, calc(100% - 32px));
+            display: flex;
+            gap: 8px;
+            padding: 8px 10px;
+            background-color: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(6px);
+            border-radius: 10px;
+            overflow-x: auto;
+            z-index: 2;
+            list-style: none;
+            margin: 0;
+        }
+        .skills-bar::-webkit-scrollbar { height: 6px; }
+        .skills-bar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.25); border-radius: 4px; }
+        .skill-item {
+            display: flex;
+            padding: 0;
+            flex: 0 0 auto;
+        }
+        .skill-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 10px;
+            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 12px;
+            white-space: nowrap;
+            transition: background 0.2s, transform 0.1s;
+        }
+        .skill-chip i { font-size: 14px; }
+        .skill-chip:hover { background: rgba(255,255,255,0.28); }
+        .skill-chip:active { transform: translateY(1px); }
+        .skill-chip:focus { outline: 2px solid #3498db; outline-offset: 2px; }
+    </style>
+</head>
+<body>
+    <h1 class="sr-only">Dineshkumar Ponnusamy — R&amp;D Project Manager</h1>
+    <div class="desktop" id="desktop">
+        <div class="skills-cloud" aria-hidden="true">
+            <span>Program Mgmt</span>
+            <span>MedTech</span>
+            <span>PACS</span>
+            <span>DICOM</span>
+            <span>IHE RAD-69</span>
+            <span>VNA</span>
+            <span>Systems Eng</span>
+            <span>ISO 13485</span>
+            <span>V&amp;V</span>
+            <span>Risk</span>
+            <span>Stakeholders</span>
+            <span>Automation</span>
+            <span>Python</span>
+            <span>C++ / C#</span>
+            <span>AWS</span>
+            <span>RAG</span>
+            <span>LangGraph</span>
+            <span>MCP</span>
+            <span>AI Delivery</span>
+            <span>Dashboards</span>
+            <span>Quality</span>
+            <span>Analytics</span>
+            <span>Leadership</span>
+        </div>
+        <div class="desktop-icons">
+            <button class="desktop-icon" type="button" data-app="about" aria-label="Open About window">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+            </button>
+            <button class="desktop-icon" type="button" data-app="portfolio" aria-label="Open Portfolio window">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </button>
+            <button class="desktop-icon" type="button" data-app="blog" aria-label="Open Blog window">
+                <i class="fas fa-blog"></i>
+                <span>Blog</span>
+            </button>
+            <button class="desktop-icon" type="button" data-app="contact" aria-label="Open Contact window">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </button>
+            <button class="desktop-icon" type="button" data-app="skills" aria-label="Open Skills window">
+                <i class="fas fa-code"></i>
+                <span>Skills</span>
+            </button>
+            <button class="desktop-icon" type="button" data-app="resume" aria-label="Open Resume window">
+                <i class="fas fa-file-alt"></i>
+                <span>Resume</span>
+            </button>
+            <button class="desktop-icon" type="button" data-app="projects" aria-label="Open Projects window">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projects</span>
+            </button>
+            <button class="desktop-icon" type="button" data-app="social" aria-label="Open Social window">
+                <i class="fas fa-share-alt"></i>
+                <span>Social</span>
+            </button>
+        </div>
+
+        <!-- Featured Skills Bar -->
+        <ul class="skills-bar" id="skills-bar" aria-label="Featured Skills">
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Program & Project Management"><i class="fa-solid fa-diagram-project"></i><span>Program Mgmt</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Agile / Scrum"><i class="fa-solid fa-arrows-rotate"></i><span>Agile</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Stakeholder Management"><i class="fa-solid fa-users"></i><span>Stakeholders</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Risk Management"><i class="fa-solid fa-triangle-exclamation"></i><span>Risk</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Systems Engineering"><i class="fa-solid fa-gears"></i><span>Systems</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Requirements & Traceability"><i class="fa-solid fa-list-check"></i><span>Requirements</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Verification & Validation"><i class="fa-solid fa-check-double"></i><span>V&amp;V</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="FDA / ISO 13485 / IEC 62304"><i class="fa-solid fa-shield-halved"></i><span>Regulatory</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Retrieval‑Augmented Generation"><i class="fa-solid fa-brain"></i><span>RAG</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Multi‑Agent Systems / LangGraph"><i class="fa-solid fa-robot"></i><span>Agents</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Model Context Protocol"><i class="fa-solid fa-plug"></i><span>MCP</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Vector Search / Embeddings"><i class="fa-solid fa-magnifying-glass"></i><span>Vector</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Jira"><i class="fa-solid fa-list-check"></i><span>Jira</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Confluence"><i class="fa-solid fa-book"></i><span>Confluence</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="Azure DevOps"><i class="fa-solid fa-cloud"></i><span>Azure DevOps</span></button>
+            </li>
+            <li class="skill-item">
+                <button class="skill-chip" type="button" data-app="skills" title="GitHub"><i class="fab fa-github"></i><span>GitHub</span></button>
+            </li>
+        </ul>
+
+        <!-- Windows -->
+        <div class="window" id="about-window" role="dialog" aria-labelledby="about-title" tabindex="-1" style="top: 50px; left: 50px; width: 600px; height: 400px;">
+            <div class="window-header">
+                <div class="window-title" id="about-title">About Me</div>
+                <div class="window-controls">
+                    <button class="window-control minimize" type="button" aria-label="Minimize"></button>
+                    <button class="window-control maximize" type="button" aria-label="Maximize"></button>
+                    <button class="window-control close" type="button" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Hello, I'm Dineshkumar Ponnusamy</h2>
+                <p style="margin-top:10px; font-size: 15px; color:#555;">R&amp;D Project Manager at Varian (a Siemens Healthineers company)</p>
+                <p style="margin-top:5px; font-size: 14px; color:#666;">United States</p>
+                <p style="margin-top:15px;">I build technology that helps people. Over 14 years delivering regulated, system‑engineered products in medtech and healthcare.</p>
+
+                <h3 style="margin-top:18px;">Project Management Focus</h3>
+                <ul style="margin:10px 0 0 18px; color:#333;">
+                    <li>Program planning &amp; delivery: scope, schedule, cost, risk, and governance</li>
+                    <li>Stakeholder alignment and cross‑functional leadership across R&amp;D, Quality, and Product</li>
+                    <li>Regulated delivery: requirements traceability, V&amp;V, and compliance readiness</li>
+                    <li>Outcome‑driven execution with metrics, transparency, and continuous improvement</li>
+                </ul>
+
+                <h3 style="margin-top:14px;">AI‑Driven Delivery</h3>
+                <ul style="margin:10px 0 0 18px; color:#333;">
+                    <li>Introduce practical AI (RAG, agents, automation) to accelerate discovery and delivery</li>
+                    <li>Prototype decision support and documentation helpers to reduce cycle time</li>
+                    <li>Design NDA‑safe, reproducible POCs for small teams using public data and open tooling</li>
+                </ul>
+
+                <h3 style="margin-top:14px;">Staying Current</h3>
+                <p style="margin-top:6px;">Tracking and experimenting with LangGraph/agents, Model Context Protocol (MCP), RAG patterns, vector search, evals, lightweight MLOps, and AI leadership programs (MIS01x AI for Leaders).</p>
+
+                <h3 style="margin-top:14px;">Build in Public (POCs)</h3>
+                <ul style="margin:10px 0 0 18px; color:#333;">
+                    <li><a href="https://github.com/Dineshkumar-Ponnusamy/HR-Copilot" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">HR‑Copilot</a> — RAG‑powered policy assistant (Streamlit + Groq + FAISS)</li>
+                    <li><a href="https://www.linkedin.com/posts/dineshkumarponnusamy_github-dineshkumar-ponnusamymcp-server-activity-7384050865135030273-Cui8" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">MCP Weather Agent</a> — Model Context Protocol server demo</li>
+                    <li><a href="https://www.linkedin.com/posts/dineshkumarponnusamy_github-dineshkumar-ponnusamymulti-agent-langgraph-activity-7384052726944604161-xg9t" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">LangGraph Multi‑Agent Demo</a> — agent collaboration patterns</li>
+                </ul>
+                <p style="margin-top:8px; font-size:13px; color:#666;">All POCs are built with public data and generic architectures; no confidential information is used.</p>
+                <p style="margin-top:8px; font-size:13px; color:#666;">These experiments de-risk ideas before I take them into regulated programs, giving quality, regulatory, and product teams working prototypes to evaluate safely.</p>
+                <h3 style="margin-top:12px;">Education</h3>
+                <p>Masters in Software Engineering. Birla Institute of Technology and Science, Pilani (2012–2014). </p>
+                <p>Bachelors in Electronics and Communication Engineering. Anna University, Chennai (2006–2010). </p>
+                <h3 style="margin-top:12px;">Interests</h3>
+                <p>Medical devices manufacturing, AI, Healthcare technology, product development, and building purposeful solutions.</p>
+            </div>
+            <div class="window-footer">About Me - Dineshkumar Ponnusamy</div>
+            <div class="resize-handle"></div>
+        </div>
+
+        <div class="window" id="portfolio-window" role="dialog" aria-labelledby="portfolio-title" tabindex="-1" style="top: 100px; left: 150px; width: 700px; height: 500px;">
+            <div class="window-header">
+                <div class="window-title" id="portfolio-title">Portfolio</div>
+                <div class="window-controls">
+                    <button class="window-control minimize" type="button" aria-label="Minimize"></button>
+                    <button class="window-control maximize" type="button" aria-label="Maximize"></button>
+                    <button class="window-control close" type="button" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Regulated Medical Device Programs</h2>
+                <p style="margin-top: 8px; color:#555;">A sampling of end-to-end delivery work on regulated devices and digital health platforms.</p>
+                <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
+                    <article style="border: 1px solid #e8e8e8; border-radius: 10px; padding: 18px; background: rgba(248,249,255,0.65);">
+                        <h3 style="font-size:18px;">Toshiba Medical PACS Platform</h3>
+                        <p style="color:#666; font-size:13px;">Capgemini · 2011 – 2014</p>
+                        <ul style="margin:12px 0 0 18px; color:#333; font-size:13px;">
+                            <li>Revamped PACS workflow around the MIST algorithm to meet NIST and Japan MOH security guidance; delivered with C++/VC++ (MFC) and C#.</li>
+                            <li>Stabilized MRI/CT image reconstruction modules and hardened the DICOM viewer with AWS S3/EC2-backed storage.</li>
+                            <li>Implemented IHE RAD-69 services that enabled cross-facility image exchange.</li>
+                        </ul>
+                        <p style="margin-top:12px; color:#888; font-size:12px;">Tech: C++/VC++ (MFC), C#, AWS S3/EC2, DICOM, IHE RAD-69, NIST security controls.</p>
+                    </article>
+                    <article style="border: 1px solid #e8e8e8; border-radius: 10px; padding: 18px; background: rgba(248,249,255,0.65);">
+                        <h3 style="font-size:18px;">GE Healthcare Vendor Neutral Archive</h3>
+                        <p style="color:#666; font-size:13px;">2014 – 2016</p>
+                        <ul style="margin:12px 0 0 18px; color:#333; font-size:13px;">
+                            <li>Delivered multi-level VNA ingest &amp; retrieval across GE and partner ecosystems aligned to DICOM, HL7 and IHE integration profiles.</li>
+                            <li>Rolled out RAD-69 gateways for Toshiba sites and productionised audit logging with Apache Shiro.</li>
+                            <li>Drove reliability, security and availability improvements across the imaging estate.</li>
+                        </ul>
+                        <p style="margin-top:12px; color:#888; font-size:12px;">Tech: Java (Apache Shiro), C#, DICOM, HL7, IHE RAD-69, enterprise logging.</p>
+                    </article>
+                    <article style="border: 1px solid #e8e8e8; border-radius: 10px; padding: 18px; background: rgba(248,249,255,0.65);">
+                        <h3 style="font-size:18px;">OEC 3D &amp; Afib V&amp;V Programs</h3>
+                        <p style="color:#666; font-size:13px;">GE Healthcare · 2016 – 2021</p>
+                        <ul style="margin:12px 0 0 18px; color:#333; font-size:13px;">
+                            <li>Coordinated system/subsystem requirements, test design, risk/FMEA, and message specs for OEC 3D imaging.</li>
+                            <li>Worked on Afib detection tool validation and delivered an ISO 13485-compliant automation framework.</li>
+                            <li>Scaled the automation toolkit from PoC to production (Python, Selenium), cutting verification-summary documentation time by 70%.</li>
+                            <li>Introduced ML-driven test summarization (Python, Keras, NumPy, SciPy, Lambda) to accelerate regression authoring.</li>
+                        </ul>
+                        <p style="margin-top:12px; color:#888; font-size:12px;">Tech: Python, Keras, NumPy, SciPy, Lambda, ISO 13485 compliant automation.</p>
+                    </article>
+                    <article style="border: 1px solid #e8e8e8; border-radius: 10px; padding: 18px; background: rgba(248,249,255,0.65);">
+                        <h3 style="font-size:18px;">Varian Digital Health Platform</h3>
+                        <p style="color:#666; font-size:13px;">2021 – Present</p>
+                        <ul style="margin:12px 0 0 18px; color:#333; font-size:13px;">
+                            <li>Designed the digital health architecture and governed data flows spanning regulated toolchains with QA, RA, cybersecurity, and product partners.</li>
+                            <li>Migrated critical data into compliant tooling under tight timelines and earned organizational recognition for the delivery.</li>
+                            <li>Automated high-volume business processes, raising reliability by &gt;30% while preserving audit readiness.</li>
+                            <li>Mentored new team members on process and technology and provided hands-on support for resolving complex technical challenges.</li>
+                        </ul>
+                        <p style="margin-top:12px; color:#888; font-size:12px;">Focus: Systems engineering, analytics automation, RAG assistants, stakeholder enablement.</p>
+                    </article>
+                </div>
+
+                <h2 style="margin-top: 32px;">Public &amp; Hobby Projects</h2>
+                <p style="margin-top: 8px; color:#555;">Open-source builds and experiments that showcase engineering depth. These complement—but do not replace—the confidential programs above.</p>
+                <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+                    <article style="border: 1px solid #eee; border-radius: 10px; overflow: hidden; background: #fff;">
+                        <img src="https://picsum.photos/seed/hrcopilot/320/190.jpg" loading="lazy" alt="HR-Copilot preview" style="width: 100%; height: 150px; object-fit: cover;">
+                        <div style="padding: 16px;">
+                            <h3 style="font-size:17px;">HR-Copilot</h3>
+                            <p style="color:#555; font-size:13px;">RAG policy assistant with Groq, FAISS, and Streamlit used to answer common HR queries during internal pilots.</p>
+                            <a href="https://github.com/Dineshkumar-Ponnusamy/HR-Copilot" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none; font-weight:500;">View Project →</a>
+                        </div>
+                    </article>
+                    <article style="border: 1px solid #eee; border-radius: 10px; overflow: hidden; background: #fff;">
+                        <img src="https://picsum.photos/seed/langgraph/320/190.jpg" loading="lazy" alt="Multi-Agent LangGraph preview" style="width: 100%; height: 150px; object-fit: cover;">
+                        <div style="padding: 16px;">
+                            <h3 style="font-size:17px;">Multi-Agent LangGraph</h3>
+                            <p style="color:#555; font-size:13px;">Planner/executor agents orchestrated with LangChain + Groq to prove multi-agent coordination patterns.</p>
+                            <a href="https://github.com/Dineshkumar-Ponnusamy/Multi-Agent-Langgraph" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none; font-weight:500;">View Repository →</a>
+                        </div>
+                    </article>
+                    <article style="border: 1px solid #eee; border-radius: 10px; overflow: hidden; background: #fff;">
+                        <img src="https://picsum.photos/seed/portfolio/320/190.jpg" loading="lazy" alt="Portfolio preview" style="width: 100%; height: 150px; object-fit: cover;">
+                        <div style="padding: 16px;">
+                            <h3 style="font-size:17px;">Desktop Portfolio</h3>
+                            <p style="color:#555; font-size:13px;">This retro desktop interface built with vanilla HTML/CSS/JS to showcase regulated and hobby work side by side.</p>
+                            <a href="https://github.com/Dineshkumar-Ponnusamy/dineshkumar-ponnusamy.github.io" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none; font-weight:500;">Browse Code →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="window-footer">Portfolio - Dineshkumar Ponnusamy</div>
+            <div class="resize-handle"></div>
+        </div>
+
+        <div class="window" id="blog-window" role="dialog" aria-labelledby="blog-title" tabindex="-1" style="top: 150px; left: 250px; width: 650px; height: 450px;">
+            <div class="window-header">
+                <div class="window-title" id="blog-title">Blog</div>
+                <div class="window-controls">
+                    <button class="window-control minimize" type="button" aria-label="Minimize"></button>
+                    <button class="window-control maximize" type="button" aria-label="Maximize"></button>
+                    <button class="window-control close" type="button" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>LinkedIn Articles</h2>
+                <p style="margin-top:6px; color:#555;">I regularly share trends and build-in-public notes from my POCs and experiments—focused on AI patterns teams can adopt safely.</p>
+                <div style="margin-top: 20px;">
+                    <article style="margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #eee;">
+                        <h3 style="font-size: 18px;">
+                            <a href="https://www.linkedin.com/pulse/test-management-process-tools-medical-devices-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#333; text-decoration:none;">Test Management Process and Tools for Medical Devices</a>
+                        </h3>
+                        <p style="color: #666; font-size: 13px;">Published 2023-05-13</p>
+                    </article>
+                    <article style="margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #eee;">
+                        <h3 style="font-size: 18px;">
+                            <a href="https://www.linkedin.com/pulse/future-medical-devices-manufacturing-embracing-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#333; text-decoration:none;">The Future of Medical Devices Manufacturing: Embracing Digital Transformation</a>
+                        </h3>
+                        <p style="color: #666; font-size: 13px;">Published 2023-05-13</p>
+                    </article>
+                    <article style="margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #eee;">
+                        <h3 style="font-size: 18px;">
+                            <a href="https://www.linkedin.com/pulse/why-traceability-big-deal-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#333; text-decoration:none;">Why Traceability is Such a Big Deal?</a>
+                        </h3>
+                        <p style="color: #666; font-size: 13px;">Published 2023-05-12</p>
+                    </article>
+                    <article style="margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #eee;">
+                        <h3 style="font-size: 18px;">
+                            <a href="https://www.linkedin.com/pulse/defect-management-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#333; text-decoration:none;">Defect Management</a>
+                        </h3>
+                        <p style="color: #666; font-size: 13px;">Published 2023-05-11</p>
+                    </article>
+                    <article style="margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #eee;">
+                        <h3 style="font-size: 18px;">
+                            <a href="https://www.linkedin.com/pulse/systems-engineering-approach-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#333; text-decoration:none;">Systems Engineering Approach</a>
+                        </h3>
+                        <p style="color: #666; font-size: 13px;">Published 2023-05-10</p>
+                    </article>
+                    <article>
+                        <h3 style="font-size: 18px;">
+                            <a href="https://www.linkedin.com/pulse/launching-memecoin-using-chatgpt-earning-60m-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#333; text-decoration:none;">Launching MemeCoin using ChatGPT and earning $60M</a>
+                        </h3>
+                        <p style="color: #666; font-size: 13px;">Published 2023-05-09</p>
+                    </article>
+                </div>
+            </div>
+            <div class="window-footer">Blog - Dineshkumar Ponnusamy</div>
+            <div class="resize-handle"></div>
+        </div>
+
+
+        <div class="window" id="contact-window" role="dialog" aria-labelledby="contact-title" tabindex="-1" style="top: 200px; left: 350px; width: 500px; height: 400px;">
+            <div class="window-header">
+                <div class="window-title" id="contact-title">Contact</div>
+                <div class="window-controls">
+                    <button class="window-control minimize" type="button" aria-label="Minimize"></button>
+                    <button class="window-control maximize" type="button" aria-label="Maximize"></button>
+                    <button class="window-control close" type="button" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Get In Touch</h2>
+                <p>The best ways to reach me:</p>
+                <div style="margin-top: 30px;">
+                    <div style="margin-bottom: 20px; display: flex; align-items: center;">
+                        <i class="fas fa-map-marker-alt" style="width: 30px; color: #3498db;"></i>
+                        <span>United States</span>
+                    </div>
+                    <div style="margin-bottom: 12px; display: flex; align-items: center;">
+                        <i class="fab fa-linkedin" style="width: 30px; color: #0077B5;"></i>
+                        <a href="https://www.linkedin.com/in/dineshkumarponnusamy/" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Message me on LinkedIn</a>
+                    </div>
+                    <div style="margin-bottom: 12px; display: flex; align-items: center;">
+                        <i class="fab fa-github" style="width: 30px; color: #333;"></i>
+                        <a href="https://github.com/Dineshkumar-Ponnusamy" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Open an issue on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="window-footer">Contact - Dineshkumar Ponnusamy</div>
+            <div class="resize-handle"></div>
+        </div>
+
+
+        <div class="window" id="skills-window" role="dialog" aria-labelledby="skills-title" tabindex="-1" style="top: 120px; left: 100px; width: 550px; height: 450px;">
+            <div class="window-header">
+                <div class="window-title" id="skills-title">Skills</div>
+                <div class="window-controls">
+                    <button class="window-control minimize" type="button" aria-label="Minimize"></button>
+                    <button class="window-control maximize" type="button" aria-label="Maximize"></button>
+                    <button class="window-control close" type="button" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Core Skills</h2>
+                <div style="margin-top: 15px;">
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="margin-bottom:8px;">Program &amp; Project Management</h3>
+                        <div style="display:flex; flex-wrap: wrap; gap:8px;">
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">R&amp;D leadership</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Stakeholder management</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Agile / Scrum</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Roadmapping &amp; delivery</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Risk management</span>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="margin-bottom:8px;">AI &amp; Emerging Tech</h3>
+                        <div style="display:flex; flex-wrap: wrap; gap:8px;">
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">RAG</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Agents / LangGraph</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Model Context Protocol</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Vector search</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Prompting &amp; evals</span>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="margin-bottom:8px;">Medtech &amp; Systems</h3>
+                        <div style="display:flex; flex-wrap: wrap; gap:8px;">
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Medical devices</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Systems engineering</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Requirements &amp; traceability</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Verification &amp; validation</span>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="margin-bottom:8px;">Quality &amp; Compliance</h3>
+                        <div style="display:flex; flex-wrap: wrap; gap:8px;">
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">FDA / ISO 13485</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">IEC 62304</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">GxP</span>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="margin-bottom:8px;">Tools</h3>
+                        <div style="display:flex; flex-wrap: wrap; gap:8px;">
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Jira</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Confluence</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Azure DevOps</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">GitHub</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom:8px;">Languages</h3>
+                        <div style="display:flex; flex-wrap: wrap; gap:8px;">
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">English</span>
+                            <span style="background:#f1f1f1; padding:6px 10px; border-radius:12px; font-size:12px;">Tamil</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-footer">Skills - Dineshkumar Ponnusamy</div>
+            <div class="resize-handle"></div>
+        </div>
+
+
+        <div class="window" id="resume-window" role="dialog" aria-labelledby="resume-title" tabindex="-1" style="top: 80px; left: 200px; width: 600px; height: 500px;">
+            <div class="window-header">
+                <div class="window-title" id="resume-title">Resume</div>
+                <div class="window-controls">
+                    <button class="window-control minimize" type="button" aria-label="Minimize"></button>
+                    <button class="window-control maximize" type="button" aria-label="Maximize"></button>
+                    <button class="window-control close" type="button" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Dineshkumar Ponnusamy - Resume</h2>
+                <div style="margin-top: 20px;">
+                    <h3>Professional Summary</h3>
+                    <p style="margin-top: 10px;">MedTech systems program manager with ~14 years in healthcare software—combining structured problem solving, systems engineering, and hands-on AI delivery (RAG, NLP pipelines, multi-agent orchestration). I translate strategy into regulated execution, keep stakeholders aligned, and build NDA-safe reference POCs in public so teams can replicate the outcomes.</p>
+
+                    <h3 style="margin-top: 18px;">Experience</h3>
+                    <div style="margin-top: 12px;">
+                        <div style="margin-bottom: 18px;">
+                            <h4>Varian (a Siemens Healthineers company) · Research and Development Project Manager</h4>
+                            <p style="color:#666; font-size: 14px;">Sep 2021 – Present · Remote</p>
+                            <ul style="padding-left: 20px;">
+                                <li>Delivered oncology platform releases on time by orchestrating cross-functional project plans, risks, and dependencies.</li>
+                                <li>Drove transparent stakeholder updates and executive readouts; cleared blockers across engineering, quality, and product.</li>
+                                <li>Mentored and recruited PMs/engineers while introducing AI-enabled delivery (RAG doc copilots, automated V&amp;V support).</li>
+                            </ul>
+                            <p style="color:#888; font-size:12px;">Skills: Python, Innovation Development, Project Portfolio Management, +12 more</p>
+                        </div>
+
+                        <div style="margin-bottom: 18px;">
+                            <h4>GE Healthcare · Contract Engagement</h4>
+                            <p style="color:#666; font-size: 14px;">Jun 2014 – Sep 2021 · Salt Lake City, UT · Barrington, IL · Bengaluru, India</p>
+                            <div style="margin-left: 12px;">
+                                <h5 style="font-size:14px; margin-top:10px;">Systems Engineering Consultant (Jun 2016 – Sep 2021)</h5>
+                                <ul style="padding-left: 20px;">
+                    <li>Worked on solution design for performance/scalability in radiation therapy systems; lifted reliability metrics with data-driven testing.</li>
+                                    <li>Maintained client communication, knowledge bases, and cross-site operational improvements.</li>
+                                    <li>Scouted emerging tech (AI/automation) and built PoCs to derisk adoption.</li>
+                                </ul>
+                                <p style="color:#888; font-size:12px;">Skills: Software Development, Medical Devices, Systems Engineering, +7 skills</p>
+
+                                <h5 style="font-size:14px; margin-top:10px;">Technical Lead (Feb 2016 – May 2016, Barrington, IL)</h5>
+                                <ul style="padding-left: 20px;">
+                                    <li>Guided automation and cybersecurity hardening for imaging informatics deployments.</li>
+                                </ul>
+                                <p style="color:#888; font-size:12px;">Skills: Automation, Cybersecurity, +1 skill</p>
+
+                                <h5 style="font-size:14px; margin-top:10px;">Technical Lead (Jun 2014 – Feb 2016, Bengaluru, India)</h5>
+                                <ul style="padding-left: 20px;">
+                    <li>Worked on automation frameworks and cybersecurity controls across global service platforms.</li>
+                                </ul>
+                                <p style="color:#888; font-size:12px;">Skills: Automation, Cybersecurity, +1 skill</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 18px;">
+                            <h4>Capgemini · Senior Software Engineer &amp; Software Engineer</h4>
+                            <p style="color:#666; font-size: 14px;">Jan 2011 – Jun 2014 · Pune, India</p>
+                            <ul style="padding-left: 20px;">
+                                <li>Took PACS/DICOM PoCs to product—including secure IAM, web viewers, AWS-based delivery, and clinician-first UX.</li>
+                                <li>Implemented MRI/PACS performance solutions and bandwidth optimization for hospital networks.</li>
+                                <li>Drove continuous improvement initiatives aligned to HIPAA and quality standards.</li>
+                            </ul>
+                            <p style="color:#888; font-size:12px;">Skills: Software Development, Medical Devices, Cloud, +4 skills</p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 18px;">Recent Projects &amp; Posts</h3>
+                    <ul style="padding-left: 20px; margin-top: 8px;">
+                        <li><a href="https://github.com/Dineshkumar-Ponnusamy/Multi-Agent-Langgraph" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Multi-Agent LangGraph System</a> — planner/executor agents with Groq API + LangChain.</li>
+                        <li><a href="https://github.com/Dineshkumar-Ponnusamy/MCP-Server" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">MCP Weather Server</a> — Model Context Protocol integration powering Claude Desktop tooling.</li>
+                        <li><a href="https://www.linkedin.com/in/dineshkumarponnusamy/details/updates/" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Build-in-public updates</a> — 1,809 followers; spotlighting multi-agent and MCP adoption patterns.</li>
+                    </ul>
+
+                    <h3 style="margin-top: 18px;">Education</h3>
+                    <div style="margin-top: 12px;">
+                        <h4>Birla Institute of Technology and Science, Pilani</h4>
+                        <p style="color:#666; font-size: 14px;">M.S. Computer Software Engineering · 2012 – 2014 · CGPA 8.75/10</p>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <h4>Anna University, Chennai</h4>
+                        <p style="color:#666; font-size: 14px;">B.E. Electronics &amp; Communication · 2006 – 2010 · 78%</p>
+                    </div>
+
+                    <h3 style="margin-top: 18px;">Licenses &amp; Certifications</h3>
+                    <ul style="padding-left: 20px; margin-top: 8px;">
+                        <li><strong>MIS01x AI for Leaders</strong> — Babson College (edX) <span style="color:#888; font-size:12px;">Issued Jul 2025 · <a href="https://courses.edx.org/certificates/8732aff1764645b5abfdcaa9a4f0bc41" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Credential</a></span></li>
+                        <li><strong>Remote Work Revolution for Everyone</strong> — Harvard University (edX) <span style="color:#888; font-size:12px;">Issued Apr 2025 · <a href="https://courses.edx.org/certificates/429b501617b947c386d9d07f9338fa77" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Credential</a></span></li>
+                        <li><strong>Agile with Atlassian Jira</strong> — Atlassian <span style="color:#888; font-size:12px;">Issued Mar 2023 · Credential ID YEQR34A75FAX</span></li>
+                        <li><strong>IEC 62304 &amp; Emerging Standards</strong> — SoftwareCPR <span style="color:#888; font-size:12px;">Issued Feb 2023</span></li>
+                        <li><strong>Innovation Think Tank Global Participant</strong> — Siemens Healthineers <span style="color:#888; font-size:12px;">Issued Mar 2022</span></li>
+                        <li><strong>EN ISO 13485:2016 Auditor Training</strong> — Qserve Group <span style="color:#888; font-size:12px;">Issued Jan 2022</span></li>
+                        <li><strong>MBSE: Model-Based Systems Engineering</strong> — University at Buffalo <span style="color:#888; font-size:12px;">Issued Jul 2021 · Credential ID M2G7Y9U68BYK</span></li>
+                        <li><strong>Foundations of Healthcare Systems Engineering</strong> — Johns Hopkins University <span style="color:#888; font-size:12px;">Issued Jun 2021 · Credential ID SKU9RAV43REN</span></li>
+                        <li><strong>Natural Language Processing Specialization</strong> — DeepLearning.AI <span style="color:#888; font-size:12px;">Issued Jun 2021 · Credential ID 74EEDMGKFCQY</span></li>
+                        <li><strong>Agile Software Development</strong> — University of Minnesota <span style="color:#888; font-size:12px;">Issued Jan 2021 · Credential ID R7W7BF68DGL5</span></li>
+                        <li><strong>Connected Manager</strong> — Harvard Business Review <span style="color:#888; font-size:12px;">Issued Jan 2021</span></li>
+                        <li><strong>Machine Learning with Python</strong> — IBM <span style="color:#888; font-size:12px;">Issued May 2019 · Credential ID e7155da3850842d6a5d1e1eec98cc65b</span></li>
+                    </ul>
+
+                    <h3 style="margin-top: 18px;">Volunteering</h3>
+                    <ul style="padding-left: 20px; margin-top: 8px;">
+                        <li><strong>Guadalupe Center</strong> — ESL Tutor (Jan 2024 – Present)</li>
+                        <li><strong>Wikipedia</strong> — Active Contributor (Aug 2010 – Mar 2021)</li>
+                    </ul>
+
+                    <h3 style="margin-top: 18px;">Honors &amp; Awards</h3>
+                    <ul style="padding-left: 20px; margin-top: 8px;">
+                        <li>HEART R&amp;R (Siemens Healthineers, Dec 2022) — Avalon Migration</li>
+                        <li>Project Star Award (Capgemini America, H2 2020)</li>
+                    </ul>
+
+                    <h3 style="margin-top: 18px;">Skills Snapshot</h3>
+                    <ul style="padding-left: 20px; margin-top: 8px;">
+                        <li>Project &amp; Program Management · AI Strategy &amp; Execution · Medical Devices · Systems Engineering · Structured Problem Solving</li>
+                    </ul>
+
+                    <h3 style="margin-top: 18px;">Location &amp; Contact</h3>
+                    <ul style="padding-left: 20px; margin-top: 8px;">
+                        <li>USA</li>
+                        <li>Connect via LinkedIn or GitHub (links below); NDA-bound conversations available on request.</li>
+                    </ul>
+
+                    <h3 style="margin-top: 18px;">Research Publications</h3>
+                    <ul style="padding-left: 20px; margin-top: 8px;">
+                        <li><a href="https://scholar.google.com/citations?user=rgruLsoAAAAJ&amp;hl=en" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Google Scholar profile</a> <span style="color:#888; font-size:12px;">(Citations: 30)</span></li>
+                    </ul>
+
+                    <h3 style="margin-top: 18px;">Publications &amp; Articles</h3>
+                    <ul style="padding-left: 20px; margin-top: 8px;">
+                        <li><a href="https://www.linkedin.com/pulse/test-management-process-tools-medical-devices-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Test Management Process and Tools for Medical Devices</a> <span style="color:#888; font-size:12px;">(Published 2023-05-13)</span></li>
+                        <li><a href="https://www.linkedin.com/pulse/future-medical-devices-manufacturing-embracing-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">The Future of Medical Devices Manufacturing: Embracing Digital Transformation</a> <span style="color:#888; font-size:12px;">(Published 2023-05-13)</span></li>
+                        <li><a href="https://www.linkedin.com/pulse/why-traceability-big-deal-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Why Traceability is Such a Big Deal?</a> <span style="color:#888; font-size:12px;">(Published 2023-05-12)</span></li>
+                        <li><a href="https://www.linkedin.com/pulse/defect-management-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Defect Management</a> <span style="color:#888; font-size:12px;">(Published 2023-05-11)</span></li>
+                        <li><a href="https://www.linkedin.com/pulse/systems-engineering-approach-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Systems Engineering Approach</a> <span style="color:#888; font-size:12px;">(Published 2023-05-10)</span></li>
+                        <li><a href="https://www.linkedin.com/pulse/launching-memecoin-using-chatgpt-earning-60m-dineshkumar-ponnusamy" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Launching MemeCoin using ChatGPT and earning $60M</a> <span style="color:#888; font-size:12px;">(Published 2023-05-09)</span></li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 24px; text-align: center;">
+                    <a href="https://www.linkedin.com/in/dineshkumarponnusamy/" target="_blank" rel="noopener" style="display:inline-block; background-color: #3498db; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; margin-right: 10px;">
+                        <i class="fab fa-linkedin"></i> View LinkedIn Profile
+                    </a>
+                    <a href="https://github.com/Dineshkumar-Ponnusamy" target="_blank" rel="noopener" style="display:inline-block; background-color: #2ecc71; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">
+                        <i class="fab fa-github"></i> View GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="window-footer">Resume - Dineshkumar Ponnusamy</div>
+            <div class="resize-handle"></div>
+        </div>
+
+        <div class="window" id="projects-window" role="dialog" aria-labelledby="projects-title" tabindex="-1" style="top: 150px; left: 300px; width: 700px; height: 500px;">
+            <div class="window-header">
+                <div class="window-title" id="projects-title">Projects</div>
+                <div class="window-controls">
+                    <button class="window-control minimize" type="button" aria-label="Minimize"></button>
+                    <button class="window-control maximize" type="button" aria-label="Maximize"></button>
+                    <button class="window-control close" type="button" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Delivery Timeline</h2>
+                <p style="margin-top:8px; color:#555;">Quick view of regulated programs and enterprise transformations I have contributed to.</p>
+                <ul style="margin-top:16px; padding-left:20px; color:#333; font-size:13px; line-height:1.65;">
+                    <li><strong>2023 – Present · Varian</strong> — Automated high-volume business workflows, improved reliability by 30%+, and coordinated stakeholder dashboards with RAG copilots.</li>
+                    <li><strong>2021 – 2022 · Varian</strong> — Architected digital health data flows and compliant integrations across regulated toolchains.</li>
+                    <li><strong>2016 – 2021 · GE Healthcare</strong> — Contributed to OEC 3D systems engineering and Afib tool V&amp;V, delivering ISO 13485 automation and ML-driven regression summarization.</li>
+                    <li><strong>2014 – 2016 · GE Healthcare</strong> — Deployed multi-level Vendor Neutral Archives with IHE RAD-69, DICOM, HL7, and secure audit logging.</li>
+                    <li><strong>2011 – 2014 · Toshiba Medical (Capgemini)</strong> — Revamped PACS/MIST platforms, strengthened DICOM viewers with AWS, and implemented RAD-69 exchange services.</li>
+                </ul>
+
+                <h2 style="margin-top:28px;">Open Source &amp; Experiments</h2>
+                <p style="margin-top:8px; color:#555;">Public artifacts that mirror the experimentation happening behind regulated delivery.</p>
+                <div style="margin-top:18px; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:18px;">
+                    <article style="border:1px solid #eee; border-radius:10px; overflow:hidden; background:#fff;">
+                        <img src="https://picsum.photos/seed/mcpweather/400/220.jpg" loading="lazy" alt="MCP Weather Agent preview" style="width:100%; height:160px; object-fit:cover;">
+                        <div style="padding:16px;">
+                            <h3 style="font-size:17px;">MCP Weather Agent</h3>
+                            <p style="color:#555; font-size:13px;">Model Context Protocol server powering Claude Desktop automations.</p>
+                            <a href="https://github.com/Dineshkumar-Ponnusamy/MCP-Server" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none; font-weight:500;">View Repository →</a>
+                        </div>
+                    </article>
+                    <article style="border:1px solid #eee; border-radius:10px; overflow:hidden; background:#fff;">
+                        <img src="https://picsum.photos/seed/automation/400/220.jpg" loading="lazy" alt="Automation scripts preview" style="width:100%; height:160px; object-fit:cover;">
+                        <div style="padding:16px;">
+                            <h3 style="font-size:17px;">Automation Scripts &amp; Dashboards</h3>
+                            <p style="color:#555; font-size:13px;">Reusable scripts and dashboards inspired by Varian automation initiatives.</p>
+                            <a href="https://github.com/Dineshkumar-Ponnusamy?tab=repositories" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none; font-weight:500;">Browse GitHub →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="window-footer">Projects - Dineshkumar Ponnusamy</div>
+            <div class="resize-handle"></div>
+        </div>
+
+        <div class="window" id="social-window" role="dialog" aria-labelledby="social-title" tabindex="-1" style="top: 180px; left: 400px; width: 500px; height: 400px;">
+            <div class="window-header">
+                <div class="window-title" id="social-title">Social</div>
+                <div class="window-controls">
+                    <button class="window-control minimize" type="button" aria-label="Minimize"></button>
+                    <button class="window-control maximize" type="button" aria-label="Maximize"></button>
+                    <button class="window-control close" type="button" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Connect With Me</h2>
+                <p style="margin-top: 20px;">Find me on professional networks:</p>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px;">
+                    <a href="https://www.linkedin.com/in/dineshkumarponnusamy/" target="_blank" rel="noopener" style="display: flex; align-items: center; text-decoration: none; color: #333;">
+                        <i class="fab fa-linkedin" style="font-size: 24px; margin-right: 10px; color: #0077B5;"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Dineshkumar-Ponnusamy" target="_blank" rel="noopener" style="display: flex; align-items: center; text-decoration: none; color: #333;">
+                        <i class="fab fa-github" style="font-size: 24px; margin-right: 10px; color: #333;"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=rgruLsoAAAAJ&amp;hl=en" target="_blank" rel="noopener" style="display: flex; align-items: center; text-decoration: none; color: #333;">
+                        <i class="fas fa-graduation-cap" style="font-size: 24px; margin-right: 10px; color: #6c63ff;"></i>
+                        <span>Google Scholar</span>
+                    </a>
+                </div>
+                <div style="margin-top: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 8px;">
+                    <h3>Links</h3>
+                    <div style="margin-top: 10px; font-size:14px; color:#333;">
+                        <p><a href="https://dineshkumar-ponnusamy.github.io" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Personal site</a></p>
+                        <p><a href="https://github.com/Dineshkumar-Ponnusamy?tab=repositories" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">GitHub repositories</a></p>
+                        <p><a href="https://scholar.google.com/citations?user=rgruLsoAAAAJ&amp;hl=en" target="_blank" rel="noopener" style="color:#3498db; text-decoration:none;">Google Scholar</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="window-footer">Social - Dineshkumar Ponnusamy</div>
+            <div class="resize-handle"></div>
+        </div>
+
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="taskbar-apps" role="toolbar" aria-label="Taskbar">
+            <button class="taskbar-app" id="start-button" type="button" aria-label="Open Start Menu">
+                <i class="fas fa-th"></i>
+            </button>
+            <button class="taskbar-app" type="button" data-app="about" aria-label="About">
+                <i class="fas fa-user"></i>
+            </button>
+            <button class="taskbar-app" type="button" data-app="portfolio" aria-label="Portfolio">
+                <i class="fas fa-briefcase"></i>
+            </button>
+            <button class="taskbar-app" type="button" data-app="blog" aria-label="Blog">
+                <i class="fas fa-blog"></i>
+            </button>
+            <button class="taskbar-app" type="button" data-app="contact" aria-label="Contact">
+                <i class="fas fa-envelope"></i>
+            </button>
+            <button class="taskbar-app" type="button" data-app="skills" aria-label="Skills">
+                <i class="fas fa-code"></i>
+            </button>
+            <button class="taskbar-app" type="button" data-app="resume" aria-label="Resume">
+                <i class="fas fa-file-alt"></i>
+            </button>
+            <button class="taskbar-app" type="button" data-app="projects" aria-label="Projects">
+                <i class="fas fa-project-diagram"></i>
+            </button>
+            <button class="taskbar-app" type="button" data-app="social" aria-label="Social">
+                <i class="fas fa-share-alt"></i>
+            </button>
+        </div>
+        <div class="system-tray">
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-volume-up"></i>
+            <i class="fas fa-battery-full"></i>
+            <span id="clock">12:00 PM</span>
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu" id="start-menu" role="menu" aria-label="Start Menu">
+        <div class="start-menu-header">
+            <h3>Start Menu</h3>
+        </div>
+        <div class="start-menu-items">
+            <button class="start-menu-item" type="button" data-app="about" role="menuitem" aria-label="Open About">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+            </button>
+            <button class="start-menu-item" type="button" data-app="portfolio" role="menuitem" aria-label="Open Portfolio">
+                <i class="fas fa-briefcase"></i>
+                <span>Portfolio</span>
+            </button>
+            <button class="start-menu-item" type="button" data-app="blog" role="menuitem" aria-label="Open Blog">
+                <i class="fas fa-blog"></i>
+                <span>Blog</span>
+            </button>
+            <button class="start-menu-item" type="button" data-app="contact" role="menuitem" aria-label="Open Contact">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </button>
+            <button class="start-menu-item" type="button" data-app="skills" role="menuitem" aria-label="Open Skills">
+                <i class="fas fa-code"></i>
+                <span>Skills</span>
+            </button>
+            <button class="start-menu-item" type="button" data-app="resume" role="menuitem" aria-label="Open Resume">
+                <i class="fas fa-file-alt"></i>
+                <span>Resume</span>
+            </button>
+            <button class="start-menu-item" type="button" data-app="projects" role="menuitem" aria-label="Open Projects">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projects</span>
+            </button>
+            <button class="start-menu-item" type="button" data-app="social" role="menuitem" aria-label="Open Social">
+                <i class="fas fa-share-alt"></i>
+                <span>Social</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Window Management
+        let activeWindow = null;
+        let zIndexCounter = 10;
+        let isDragging = false;
+        let isResizing = false;
+        let currentWindow = null;
+        let startX = 0;
+        let startY = 0;
+        let startWidth = 0;
+        let startHeight = 0;
+        let startLeft = 0;
+        let startTop = 0;
+
+        function ensureWindowInViewport(windowElement) {
+            if (!windowElement || windowElement.dataset.maximized === 'true') {
+                if (windowElement && windowElement.dataset.maximized === 'true') {
+                    const taskbarHeight = document.querySelector('.taskbar')?.offsetHeight || 50;
+                    windowElement.style.transform = '';
+                    windowElement.style.left = '0';
+                    windowElement.style.top = '0';
+                    windowElement.style.width = '100%';
+                    windowElement.style.height = `calc(100% - ${taskbarHeight}px)`;
+                }
+                return;
+            }
+
+            const taskbarHeight = document.querySelector('.taskbar')?.offsetHeight || 50;
+
+            requestAnimationFrame(() => {
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+                const maxWidth = Math.max(280, viewportWidth - 32);
+                const maxHeight = Math.max(220, viewportHeight - taskbarHeight - 32);
+
+                if (windowElement.offsetWidth > maxWidth) {
+                    windowElement.style.width = `${maxWidth}px`;
+                }
+
+                if (windowElement.offsetHeight > maxHeight) {
+                    windowElement.style.height = `${maxHeight}px`;
+                }
+
+                const updatedWidth = windowElement.offsetWidth;
+                const updatedHeight = windowElement.offsetHeight;
+
+                let left = parseFloat(windowElement.style.left);
+                let top = parseFloat(windowElement.style.top);
+
+                if (Number.isNaN(left)) {
+                    left = windowElement.offsetLeft;
+                }
+
+                if (Number.isNaN(top)) {
+                    top = windowElement.offsetTop;
+                }
+
+                const maxLeft = viewportWidth - updatedWidth - 10;
+                const maxTop = viewportHeight - taskbarHeight - updatedHeight - 10;
+
+                if (viewportWidth <= 600) {
+                    windowElement.style.left = '50%';
+                    windowElement.style.transform = 'translateX(-50%)';
+                    const clampedTop = Math.max(10, Math.min(top, maxTop));
+                    windowElement.style.top = `${clampedTop}px`;
+                } else {
+                    windowElement.style.transform = '';
+                    const clampedLeft = Math.max(10, Math.min(left, maxLeft));
+                    const clampedTop = Math.max(10, Math.min(top, maxTop));
+                    windowElement.style.left = `${clampedLeft}px`;
+                    windowElement.style.top = `${clampedTop}px`;
+                }
+            });
+        }
+
+        // Open window function
+        function openWindow(appName) {
+            const windowElement = document.getElementById(`${appName}-window`);
+            if (windowElement) {
+                windowElement.classList.add('active');
+                windowElement.style.zIndex = ++zIndexCounter;
+                activeWindow = windowElement;
+                ensureWindowInViewport(windowElement);
+                // Focus window for accessibility
+                if (typeof windowElement.focus === 'function') {
+                    windowElement.focus();
+                }
+                
+                // Update taskbar
+                document.querySelectorAll('.taskbar-app').forEach(app => {
+                    if (app.dataset.app === appName) {
+                        app.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        // Close window function
+        function closeWindow(windowElement) {
+            windowElement.classList.remove('active');
+            
+            // Update taskbar
+            const appName = windowElement.id.replace('-window', '');
+            document.querySelectorAll('.taskbar-app').forEach(app => {
+                if (app.dataset.app === appName) {
+                    app.classList.remove('active');
+                }
+            });
+            
+            // Set new active window if there are other open windows
+            const openWindows = document.querySelectorAll('.window.active');
+            if (openWindows.length > 0) {
+                activeWindow = openWindows[openWindows.length - 1];
+                activeWindow.style.zIndex = ++zIndexCounter;
+            } else {
+                activeWindow = null;
+            }
+        }
+
+        // Desktop icon click handlers
+        document.querySelectorAll('.desktop-icon').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const appName = this.dataset.app;
+                openWindow(appName);
+            });
+            
+            // Double-click to open
+            icon.addEventListener('dblclick', function() {
+                const appName = this.dataset.app;
+                openWindow(appName);
+            });
+        });
+
+        // Taskbar app click handlers
+        document.querySelectorAll('.taskbar-app[data-app]').forEach(app => {
+            app.addEventListener('click', function() {
+                const appName = this.dataset.app;
+                const windowElement = document.getElementById(`${appName}-window`);
+                
+                if (windowElement.classList.contains('active')) {
+                    // If window is active, minimize it
+                    windowElement.classList.remove('active');
+                    this.classList.remove('active');
+                } else {
+                    // If window is not active, open it
+                    openWindow(appName);
+                }
+            });
+        });
+
+        // Start menu click handlers
+        document.querySelectorAll('.start-menu-item[data-app]').forEach(item => {
+            item.addEventListener('click', function() {
+                const appName = this.dataset.app;
+                openWindow(appName);
+                document.getElementById('start-menu').classList.remove('active');
+            });
+        });
+
+        // Start button click handler
+        document.getElementById('start-button').addEventListener('click', function() {
+            const startMenu = document.getElementById('start-menu');
+            startMenu.classList.toggle('active');
+        });
+
+        // Featured skills chips open Skills window
+        document.querySelectorAll('#skills-bar .skill-chip').forEach(chip => {
+            chip.addEventListener('click', () => openWindow('skills'));
+        });
+
+        // Window control handlers
+        document.querySelectorAll('.window-control.close').forEach(control => {
+            control.addEventListener('click', function() {
+                const windowElement = this.closest('.window');
+                closeWindow(windowElement);
+            });
+        });
+
+        document.querySelectorAll('.window-control.minimize').forEach(control => {
+            control.addEventListener('click', function() {
+                const windowElement = this.closest('.window');
+                windowElement.classList.remove('active');
+                
+                // Update taskbar
+                const appName = windowElement.id.replace('-window', '');
+                document.querySelectorAll('.taskbar-app').forEach(app => {
+                    if (app.dataset.app === appName) {
+                        app.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        document.querySelectorAll('.window-control.maximize').forEach(control => {
+            control.addEventListener('click', function() {
+                const windowElement = this.closest('.window');
+                const taskbarHeight = document.querySelector('.taskbar')?.offsetHeight || 50;
+                if (windowElement.dataset.maximized === 'true') {
+                    // Restore from stored dimensions
+                    windowElement.style.width = windowElement.dataset.prevWidth || '';
+                    windowElement.style.height = windowElement.dataset.prevHeight || '';
+                    windowElement.style.top = windowElement.dataset.prevTop || '';
+                    windowElement.style.left = windowElement.dataset.prevLeft || '';
+                    windowElement.dataset.maximized = 'false';
+                    ensureWindowInViewport(windowElement);
+                } else {
+                    // Store current dimensions and maximize
+                    windowElement.dataset.prevWidth = windowElement.style.width || `${windowElement.offsetWidth}px`;
+                    windowElement.dataset.prevHeight = windowElement.style.height || `${windowElement.offsetHeight}px`;
+                    windowElement.dataset.prevTop = windowElement.style.top || `${windowElement.offsetTop}px`;
+                    windowElement.dataset.prevLeft = windowElement.style.left || `${windowElement.offsetLeft}px`;
+                    windowElement.style.transform = '';
+                    windowElement.style.top = '0';
+                    windowElement.style.left = '0';
+                    windowElement.style.width = '100%';
+                    windowElement.style.height = `calc(100% - ${taskbarHeight}px)`;
+                    windowElement.dataset.maximized = 'true';
+                }
+            });
+        });
+
+        // Window dragging
+        document.querySelectorAll('.window-header').forEach(header => {
+            header.addEventListener('mousedown', function(e) {
+                if (e.target.classList.contains('window-control')) return;
+
+                currentWindow = this.closest('.window');
+                currentWindow.style.zIndex = ++zIndexCounter;
+                activeWindow = currentWindow;
+
+                if (window.innerWidth <= 600 || currentWindow.dataset.maximized === 'true') {
+                    return;
+                }
+
+                currentWindow.style.transform = '';
+                isDragging = true;
+                startX = e.clientX - currentWindow.offsetLeft;
+                startY = e.clientY - currentWindow.offsetTop;
+            });
+        });
+
+        // Window resizing
+        document.querySelectorAll('.resize-handle').forEach(handle => {
+            handle.addEventListener('mousedown', function(e) {
+                currentWindow = this.closest('.window');
+                currentWindow.style.zIndex = ++zIndexCounter;
+                activeWindow = currentWindow;
+
+                if (window.innerWidth <= 600 || currentWindow.dataset.maximized === 'true') {
+                    currentWindow = null;
+                    return;
+                }
+
+                isResizing = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                startWidth = parseInt(window.getComputedStyle(currentWindow).width, 10);
+                startHeight = parseInt(window.getComputedStyle(currentWindow).height, 10);
+                startLeft = currentWindow.offsetLeft;
+                startTop = currentWindow.offsetTop;
+                
+                e.preventDefault();
+            });
+        });
+
+        // Mouse move handler for dragging and resizing
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging && currentWindow) {
+                const taskbarHeight = document.querySelector('.taskbar')?.offsetHeight || 50;
+                const newLeft = e.clientX - startX;
+                const newTop = e.clientY - startY;
+                const maxLeft = window.innerWidth - currentWindow.offsetWidth - 10;
+                const maxTop = window.innerHeight - taskbarHeight - currentWindow.offsetHeight - 10;
+                const clampedLeft = Math.max(10, Math.min(newLeft, maxLeft));
+                const clampedTop = Math.max(10, Math.min(newTop, maxTop));
+                currentWindow.style.left = `${clampedLeft}px`;
+                currentWindow.style.top = `${clampedTop}px`;
+            }
+            
+            if (isResizing && currentWindow) {
+                const taskbarHeight = document.querySelector('.taskbar')?.offsetHeight || 50;
+                const newWidth = startWidth + e.clientX - startX;
+                const newHeight = startHeight + e.clientY - startY;
+                const maxAllowedWidth = window.innerWidth - 20;
+                const maxAllowedHeight = window.innerHeight - taskbarHeight - 20;
+                
+                if (newWidth > 260) {
+                    currentWindow.style.width = `${Math.min(newWidth, maxAllowedWidth)}px`;
+                }
+                
+                if (newHeight > 220) {
+                    currentWindow.style.height = `${Math.min(newHeight, maxAllowedHeight)}px`;
+                }
+            }
+        });
+
+        // Mouse up handler for dragging and resizing
+        document.addEventListener('mouseup', function() {
+            if (currentWindow) {
+                ensureWindowInViewport(currentWindow);
+            }
+            isDragging = false;
+            isResizing = false;
+            currentWindow = null;
+        });
+
+        window.addEventListener('resize', () => {
+            document.querySelectorAll('.window.active').forEach(win => ensureWindowInViewport(win));
+        });
+
+        // Click outside to close start menu
+        document.addEventListener('click', function(e) {
+            const startMenu = document.getElementById('start-menu');
+            const startButton = document.getElementById('start-button');
+            
+            if (!startMenu.contains(e.target) && !startButton.contains(e.target)) {
+                startMenu.classList.remove('active');
+            }
+        });
+
+        // Clock update
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const displayHours = hours % 12 || 12;
+            
+            document.getElementById('clock').textContent = `${displayHours}:${minutes} ${ampm}`;
+        }
+        
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Alt + Tab to switch between windows
+            if (e.altKey && e.key === 'Tab') {
+                e.preventDefault();
+                const openWindows = Array.from(document.querySelectorAll('.window.active'));
+                
+                if (openWindows.length > 1) {
+                    const currentIndex = openWindows.indexOf(activeWindow);
+                    const nextIndex = (currentIndex + 1) % openWindows.length;
+                    const nextWindow = openWindows[nextIndex];
+                    
+                    nextWindow.style.zIndex = ++zIndexCounter;
+                    activeWindow = nextWindow;
+                }
+            }
+            
+            // Escape to close start menu
+            if (e.key === 'Escape') {
+                document.getElementById('start-menu').classList.remove('active');
+            }
+        });
+
+        // Window content click to bring to front
+        document.querySelectorAll('.window-content').forEach(content => {
+            content.addEventListener('click', function() {
+                const windowElement = this.closest('.window');
+                windowElement.style.zIndex = ++zIndexCounter;
+                activeWindow = windowElement;
+            });
+        });
+    </script>
+</body>
+</html>
